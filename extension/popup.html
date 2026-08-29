@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  body {
+    width: 320px;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 16px;
+  }
+  #status {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .safe { background: #d7f7dd; color: #1a7431; }
+  .phishing { background: #fbdada; color: #a11212; }
+  .unknown { background: #eee; color: #555; }
+  #confidence { font-size: 13px; color: #444; margin-bottom: 8px; }
+  #reasons { font-size: 13px; padding-left: 18px; margin: 0; }
+  #url { font-size: 11px; color: #888; word-break: break-all; margin-top: 10px; }
+  button {
+    margin-top: 12px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  button:hover { background: #111; }
+</style>
+</head>
+<body>
+  <div id="status" class="unknown">Checking...</div>
+  <div id="confidence"></div>
+  <ul id="reasons"></ul>
+  <div id="url"></div>
+  <button id="recheck">Re-check this page</button>
+  <script src="popup.js"></script>
+</body>
+</html>
